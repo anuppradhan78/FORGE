@@ -2,6 +2,9 @@ import { NextRequest, NextResponse } from 'next/server';
 import neo4j from 'neo4j-driver';
 import { GraphNode, GraphEdge, GraphData } from '../../../types/graph';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 // Neo4j connection configuration
 const getNeo4jDriver = () => {
   const uri = process.env.NEO4J_URI || 'bolt://localhost:7687';

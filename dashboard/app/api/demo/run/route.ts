@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 /**
  * Demo Run API Route
  * Triggers the complete demo flow via DemoService

@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 /**
  * Audit Trail API Route
  * Queries Neo4j for recent decisions with full provenance data
