@@ -1,0 +1,172 @@
+{
+  "scenarios": [
+    {
+      "id": "nft-purchase-normal",
+      "transaction": {
+        "type": "buy",
+        "assetId": "near-punks-#1234",
+        "amount": 1,
+        "price": 25.5,
+        "fees": 0.5
+      },
+      "portfolioBefore": {
+        "totalValue": 1000.0,
+        "assets": {
+          "NEAR": 1000.0
+        }
+      },
+      "response": {
+        "portfolioAfter": {
+          "totalValue": 1000.0,
+          "assets": {
+            "NEAR": 974.0,
+            "near-punks-#1234": 26.0
+          }
+        },
+        "variance": {
+          "expected": 26.0,
+          "actual": 26.0,
+          "deviation": 0.0
+        },
+        "anomalies": [],
+        "aiExplanation": "Portfolio updated successfully. Purchased NEAR Punks NFT #1234 for 25.5 NEAR with 0.5 NEAR in transaction fees. Your NEAR balance decreased by 26.0 NEAR (2.6% of portfolio). The NFT is now valued at 26.0 NEAR based on current floor price. Total portfolio value remains stable at 1000.0 NEAR.",
+        "reconciled": true,
+        "timestamp": "2026-02-27T10:30:00Z"
+      }
+    },
+    {
+      "id": "nft-purchase-high-variance",
+      "transaction": {
+        "type": "buy",
+        "assetId": "asac-#5678",
+        "amount": 1,
+        "price": 42.0,
+        "fees": 0.8
+      },
+      "portfolioBefore": {
+        "totalValue": 1000.0,
+        "assets": {
+          "NEAR": 1000.0
+        }
+      },
+      "response": {
+        "portfolioAfter": {
+          "totalValue": 995.2,
+          "assets": {
+            "NEAR": 957.2,
+            "asac-#5678": 38.0
+          }
+        },
+        "variance": {
+          "expected": 42.8,
+          "actual": 42.8,
+          "deviation": 0.0
+        },
+        "anomalies": [
+          {
+            "type": "price_spike",
+            "severity": "medium",
+            "description": "NFT floor price dropped 9.5% immediately after purchase (from 42.0 to 38.0 NEAR). This resulted in a 4.8 NEAR unrealized loss."
+          }
+        ],
+        "aiExplanation": "Portfolio reconciliation shows a concerning variance. You purchased ASAC NFT #5678 for 42.0 NEAR plus 0.8 NEAR fees (total 42.8 NEAR). However, the current market value is only 38.0 NEAR, representing a 9.5% immediate loss. This price drop occurred within minutes of your purchase, which may indicate you bought at a temporary price spike. Your total portfolio value decreased from 1000.0 to 995.2 NEAR (-0.48%).",
+        "reconciled": true,
+        "timestamp": "2026-02-27T11:15:00Z"
+      }
+    },
+    {
+      "id": "token-transfer-with-fee-anomaly",
+      "transaction": {
+        "type": "transfer",
+        "assetId": "NEAR",
+        "amount": 100.0,
+        "price": 100.0,
+        "fees": 8.5
+      },
+      "portfolioBefore": {
+        "totalValue": 1000.0,
+        "assets": {
+          "NEAR": 1000.0
+        }
+      },
+      "response": {
+        "portfolioAfter": {
+          "totalValue": 891.5,
+          "assets": {
+            "NEAR": 891.5
+          }
+        },
+        "variance": {
+          "expected": 100.5,
+          "actual": 108.5,
+          "deviation": 8.0
+        },
+        "anomalies": [
+          {
+            "type": "unexpected_fee",
+            "severity": "high",
+            "description": "Transaction fees of 8.5 NEAR are 17x higher than typical NEAR transfer fees (expected ~0.5 NEAR). This represents an 8.0 NEAR (8%) variance from expected costs."
+          }
+        ],
+        "aiExplanation": "ALERT: Unusual transaction detected. You transferred 100.0 NEAR, but total cost was 108.5 NEAR due to abnormally high fees. Standard NEAR transfers cost approximately 0.5 NEAR, but this transaction incurred 8.5 NEAR in fees - a 1600% increase. This may indicate network congestion, a complex smart contract interaction, or a potential issue with the transaction routing. Your portfolio value decreased from 1000.0 to 891.5 NEAR (-10.85%).",
+        "reconciled": true,
+        "timestamp": "2026-02-27T12:45:00Z"
+      }
+    },
+    {
+      "id": "multi-asset-portfolio",
+      "transaction": {
+        "type": "buy",
+        "assetId": "paras-gems-#999",
+        "amount": 1,
+        "price": 15.0,
+        "fees": 0.3
+      },
+      "portfolioBefore": {
+        "totalValue": 1050.0,
+        "assets": {
+          "NEAR": 500.0,
+          "near-punks-#1234": 26.0,
+          "asac-#5678": 38.0,
+          "stNEAR": 486.0
+        }
+      },
+      "response": {
+        "portfolioAfter": {
+          "totalValue": 1050.0,
+          "assets": {
+            "NEAR": 484.7,
+            "near-punks-#1234": 26.0,
+            "asac-#5678": 38.0,
+            "stNEAR": 486.0,
+            "paras-gems-#999": 15.3
+          }
+        },
+        "variance": {
+          "expected": 15.3,
+          "actual": 15.3,
+          "deviation": 0.0
+        },
+        "anomalies": [],
+        "aiExplanation": "Successful NFT purchase with healthy portfolio diversification. You acquired Paras Gems NFT #999 for 15.0 NEAR plus 0.3 NEAR fees. Your portfolio now contains 4 NFTs and liquid NEAR/stNEAR positions. The NFT represents 1.46% of your total portfolio value. Current allocation: 46.3% liquid (NEAR + stNEAR), 53.7% NFTs. Total portfolio value remains stable at 1050.0 NEAR.",
+        "reconciled": true,
+        "timestamp": "2026-02-27T14:20:00Z"
+      }
+    }
+  ],
+  "defaultResponse": {
+    "portfolioAfter": {
+      "totalValue": 0,
+      "assets": {}
+    },
+    "variance": {
+      "expected": 0,
+      "actual": 0,
+      "deviation": 0.0
+    },
+    "anomalies": [],
+    "aiExplanation": "Portfolio reconciliation completed using local calculation fallback.",
+    "reconciled": true,
+    "timestamp": ""
+  }
+}

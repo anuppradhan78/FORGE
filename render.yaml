@@ -1,0 +1,65 @@
+services:
+  # Express API Backend
+  - type: web
+    name: forge-api
+    runtime: node
+    region: oregon
+    plan: free
+    buildCommand: cd api && npm install && npm run build
+    startCommand: cd api && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: NEO4J_URI
+        sync: false
+      - key: NEO4J_USERNAME
+        sync: false
+      - key: NEO4J_PASSWORD
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: TAVILY_API_KEY
+        sync: false
+      - key: YUTORI_API_KEY
+        sync: false
+      - key: SENSO_API_KEY
+        sync: false
+      - key: MODULATE_API_KEY
+        sync: false
+      - key: NUMERIC_API_KEY
+        sync: false
+      - key: USE_MOCK_TAVILY
+        value: false
+      - key: USE_MOCK_YUTORI
+        value: false
+      - key: USE_MOCK_SENSO
+        value: false
+      - key: USE_MOCK_MODULATE
+        value: false
+      - key: USE_MOCK_NUMERIC
+        value: false
+      - key: CORS_ORIGIN
+        value: https://forge-dashboard.onrender.com
+    healthCheckPath: /health
+
+  # Next.js Dashboard Frontend
+  - type: web
+    name: forge-dashboard
+    runtime: node
+    region: oregon
+    plan: free
+    buildCommand: cd dashboard && npm install && npm run build
+    startCommand: cd dashboard && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_PUBLIC_API_URL
+        value: https://forge-api.onrender.com
+      - key: NEO4J_URI
+        sync: false
+      - key: NEO4J_USERNAME
+        sync: false
+      - key: NEO4J_PASSWORD
+        sync: false

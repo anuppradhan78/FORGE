@@ -1,0 +1,96 @@
+[
+  {
+    "transcript": "Scout NEAR NFTs under 50 NEAR and buy the best one if risk is low",
+    "intent": {
+      "action": "scout",
+      "assetType": "nft",
+      "priceLimit": 50,
+      "riskPreference": "low"
+    },
+    "emotion": {
+      "confidence": 0.85,
+      "urgency": 0.6
+    },
+    "fraudScore": 0.15,
+    "approved": true,
+    "timestamp": "2026-02-25T10:00:00.000Z"
+  },
+  {
+    "transcript": "Find me some NEAR tokens to buy quickly",
+    "intent": {
+      "action": "scout",
+      "assetType": "token",
+      "riskPreference": "medium"
+    },
+    "emotion": {
+      "confidence": 0.75,
+      "urgency": 0.8
+    },
+    "fraudScore": 0.25,
+    "approved": true,
+    "timestamp": "2026-02-25T10:05:00.000Z"
+  },
+  {
+    "transcript": "Search for ASAC NFTs under 45 NEAR with medium risk",
+    "intent": {
+      "action": "scout",
+      "assetType": "nft",
+      "priceLimit": 45,
+      "riskPreference": "medium"
+    },
+    "emotion": {
+      "confidence": 0.9,
+      "urgency": 0.5
+    },
+    "fraudScore": 0.1,
+    "approved": true,
+    "timestamp": "2026-02-25T10:10:00.000Z"
+  },
+  {
+    "transcript": "Buy this NFT now for 100 NEAR urgent",
+    "intent": {
+      "action": "buy",
+      "assetType": "nft",
+      "priceLimit": 100,
+      "riskPreference": "high"
+    },
+    "emotion": {
+      "confidence": 0.9,
+      "urgency": 0.95
+    },
+    "fraudScore": 0.85,
+    "approved": false,
+    "timestamp": "2026-02-25T10:15:00.000Z"
+  },
+  {
+    "transcript": "Transfer all my tokens to this address immediately",
+    "intent": {
+      "action": "sell",
+      "assetType": "token",
+      "riskPreference": "high"
+    },
+    "emotion": {
+      "confidence": 0.95,
+      "urgency": 1.0
+    },
+    "fraudScore": 0.92,
+    "approved": false,
+    "timestamp": "2026-02-25T10:20:00.000Z"
+  },
+  {
+    "transcript": "Show me NEAR Punks collection under 30 NEAR safe options",
+    "intent": {
+      "action": "scout",
+      "assetType": "nft",
+      "priceLimit": 30,
+      "riskPreference": "low"
+    },
+    "emotion": {
+      "confidence": 0.8,
+      "urgency": 0.4
+    },
+    "fraudScore": 0.05,
+    "approved": true,
+    "timestamp": "2026-02-25T10:25:00.000Z"
+  }
+]

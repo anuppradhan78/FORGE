@@ -1,0 +1,31 @@
+{
+  "name": "forge-agentic-commerce-platform",
+  "version": "0.1.0",
+  "description": "FORGE - Forged On-chain Regulated Governance Engine",
+  "private": true,
+  "workspaces": [
+    "api",
+    "dashboard"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:dashboard\"",
+    "dev:api": "npm run dev --workspace=api",
+    "dev:dashboard": "npm run dev --workspace=dashboard",
+    "test": "npm run test --workspaces",
+    "build": "npm run build --workspaces",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down"
+  },
+  "keywords": [
+    "ai-agent",
+    "blockchain",
+    "governance",
+    "ironclaw",
+    "neo4j"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

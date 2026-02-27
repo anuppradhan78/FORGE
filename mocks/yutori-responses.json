@@ -1,0 +1,76 @@
+{
+  "scoutId": "scout-near-nft-monitor-2026",
+  "status": "active",
+  "findings": [
+    {
+      "timestamp": "2026-02-25T11:30:00Z",
+      "url": "https://paras.id/token/nearpunks.near::5678",
+      "data": {
+        "collection": "NEAR Punks",
+        "tokenId": "5678",
+        "price": 24.8,
+        "priceChange": -3.2,
+        "seller": "collector.near",
+        "traits": ["red_mohawk", "3d_glasses"],
+        "rarity_score": 87.5
+      },
+      "alertTriggered": true
+    },
+    {
+      "timestamp": "2026-02-25T11:15:00Z",
+      "url": "https://paras.id/token/asac.near::9012",
+      "data": {
+        "collection": "Antisocial Ape Club",
+        "tokenId": "9012",
+        "price": 41.5,
+        "priceChange": -1.2,
+        "seller": "apelover.near",
+        "traits": ["blue_fur", "crown"],
+        "rarity_score": 92.3
+      },
+      "alertTriggered": true
+    },
+    {
+      "timestamp": "2026-02-25T10:45:00Z",
+      "url": "https://paras.id/token/parasgems.near::3344",
+      "data": {
+        "collection": "Paras Gems",
+        "tokenId": "3344",
+        "price": 14.2,
+        "priceChange": -5.3,
+        "seller": "gemcollector.near",
+        "traits": ["emerald", "flawless"],
+        "rarity_score": 78.9
+      },
+      "alertTriggered": true
+    },
+    {
+      "timestamp": "2026-02-25T10:30:00Z",
+      "url": "https://paras.id/token/nearpunks.near::7890",
+      "data": {
+        "collection": "NEAR Punks",
+        "tokenId": "7890",
+        "price": 27.0,
+        "priceChange": 1.5,
+        "seller": "punktrader.near",
+        "traits": ["purple_hair", "earring"],
+        "rarity_score": 65.4
+      },
+      "alertTriggered": false
+    },
+    {
+      "timestamp": "2026-02-25T10:00:00Z",
+      "url": "https://paras.id/token/asac.near::4567",
+      "data": {
+        "collection": "Antisocial Ape Club",
+        "tokenId": "4567",
+        "price": 43.8,
+        "priceChange": 4.3,
+        "seller": "nftwhale.near",
+        "traits": ["gold_chain", "sunglasses"],
+        "rarity_score": 88.7
+      },
+      "alertTriggered": false
+    }
+  ]
+}

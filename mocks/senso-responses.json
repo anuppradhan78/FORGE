@@ -1,0 +1,126 @@
+{
+  "collections": [
+    {
+      "name": "NEAR Punks",
+      "floorPrice": 25.5,
+      "verified": true,
+      "contractAddress": "nearpunks.near",
+      "verifiedUrl": "https://paras.id/collection/nearpunks.near",
+      "description": "10,000 unique punk NFTs on NEAR Protocol"
+    },
+    {
+      "name": "Antisocial Ape Club",
+      "floorPrice": 42.0,
+      "verified": true,
+      "contractAddress": "asac.near",
+      "verifiedUrl": "https://paras.id/collection/asac.near",
+      "description": "ASAC - Premium NFT collection on NEAR"
+    },
+    {
+      "name": "ASAC",
+      "floorPrice": 42.0,
+      "verified": true,
+      "contractAddress": "asac.near",
+      "verifiedUrl": "https://paras.id/collection/asac.near",
+      "description": "ASAC - Premium NFT collection on NEAR"
+    },
+    {
+      "name": "Paras Gems",
+      "floorPrice": 15.0,
+      "verified": true,
+      "contractAddress": "parasgems.near",
+      "verifiedUrl": "https://paras.id/collection/parasgems.near",
+      "description": "Collectible gems on Paras marketplace"
+    },
+    {
+      "name": "NEARNauts",
+      "floorPrice": 8.5,
+      "verified": true,
+      "contractAddress": "nearnauts.near",
+      "verifiedUrl": "https://paras.id/collection/nearnauts.near",
+      "description": "Space-themed NFT collection"
+    },
+    {
+      "name": "Mara",
+      "floorPrice": 12.0,
+      "verified": true,
+      "contractAddress": "mara.near",
+      "verifiedUrl": "https://paras.id/collection/mara.near",
+      "description": "Generative art collection on NEAR"
+    }
+  ],
+  "mockVerificationExamples": [
+    {
+      "scenario": "Legitimate deal within floor price range",
+      "dealData": {
+        "assetId": "nearpunks.near:1234",
+        "collection": "NEAR Punks",
+        "price": 26.0,
+        "seller": "alice.near",
+        "listingUrl": "https://paras.id/token/nearpunks.near::1234"
+      },
+      "expectedResult": {
+        "verified": true,
+        "confidenceScore": 0.9,
+        "checks": {
+          "collectionLegitimate": true,
+          "floorPriceAccurate": true,
+          "sellerReputable": true
+        },
+        "groundTruth": {
+          "actualFloorPrice": 25.5,
+          "priceDeviation": 1.96
+        },
+        "riskLevel": "low"
+      }
+    },
+    {
+      "scenario": "Suspicious deal - price 20% above floor",
+      "dealData": {
+        "assetId": "asac.near:5678",
+        "collection": "ASAC",
+        "price": 50.4,
+        "seller": "scammer.near",
+        "listingUrl": "https://suspicious-site.com/nft/5678"
+      },
+      "expectedResult": {
+        "verified": false,
+        "confidenceScore": 0.5,
+        "checks": {
+          "collectionLegitimate": true,
+          "floorPriceAccurate": false,
+          "sellerReputable": true
+        },
+        "groundTruth": {
+          "actualFloorPrice": 42.0,
+          "priceDeviation": 20.0
+        },
+        "riskLevel": "high"
+      }
+    },
+    {
+      "scenario": "Good deal - below floor price",
+      "dealData": {
+        "assetId": "parasgems.near:9999",
+        "collection": "Paras Gems",
+        "price": 13.5,
+        "seller": "bob.near",
+        "listingUrl": "https://paras.id/token/parasgems.near::9999"
+      },
+      "expectedResult": {
+        "verified": true,
+        "confidenceScore": 0.9,
+        "checks": {
+          "collectionLegitimate": true,
+          "floorPriceAccurate": true,
+          "sellerReputable": true
+        },
+        "groundTruth": {
+          "actualFloorPrice": 15.0,
+          "priceDeviation": -10.0
+        },
+        "riskLevel": "low"
+      }
+    }
+  ]
+}

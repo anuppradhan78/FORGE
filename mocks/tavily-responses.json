@@ -1,0 +1,41 @@
+{
+  "query": "NEAR NFT listings",
+  "responseTime": 1250,
+  "results": [
+    {
+      "title": "NEAR Punks #4523 - Premium NFT Listing",
+      "url": "https://paras.id/token/nearpunks.near::4523",
+      "content": "Rare NEAR Punks NFT available for 28.5 NEAR. This collectible features unique traits including laser eyes and mohawk. Floor price for NEAR Punks collection is 25.5 NEAR. Verified seller with 98% positive feedback.",
+      "score": 0.95,
+      "publishedDate": "2026-02-25T10:30:00Z"
+    },
+    {
+      "title": "Antisocial Ape Club (ASAC) #1892 - Exclusive Drop",
+      "url": "https://paras.id/token/asac.near::1892",
+      "content": "Premium ASAC NFT listed at 45.0 NEAR. Part of the highly sought-after Antisocial Ape Club collection with floor price of 42.0 NEAR. This ape features golden fur and diamond earrings. Limited time offer from verified creator.",
+      "score": 0.92,
+      "publishedDate": "2026-02-25T09:15:00Z"
+    },
+    {
+      "title": "Paras Gems Collection - Rare Blue Diamond",
+      "url": "https://paras.id/token/parasgems.near::7821",
+      "content": "Beautiful Paras Gems NFT featuring rare blue diamond trait. Listed at 18.0 NEAR, below the collection floor price of 15.0 NEAR. This gem has been verified by the Paras team and includes certificate of authenticity.",
+      "score": 0.88,
+      "publishedDate": "2026-02-24T16:45:00Z"
+    },
+    {
+      "title": "NEAR Punks #2341 - Budget Friendly Option",
+      "url": "https://paras.id/token/nearpunks.near::2341",
+      "content": "Affordable NEAR Punks NFT at 26.0 NEAR, just above floor price. Classic punk with standard traits. Great entry point into the NEAR Punks ecosystem. Seller has completed 50+ successful transactions.",
+      "score": 0.85,
+      "publishedDate": "2026-02-25T08:00:00Z"
+    },
+    {
+      "title": "ASAC #3456 - Golden Ape Special Edition",
+      "url": "https://paras.id/token/asac.near::3456",
+      "content": "Special edition Antisocial Ape Club NFT with golden traits. Listed at 48.5 NEAR. This is a rare variant with only 50 minted. Current ASAC floor is 42.0 NEAR. Includes exclusive community access.",
+      "score": 0.82,
+      "publishedDate": "2026-02-24T14:20:00Z"
+    }
+  ]
+}
